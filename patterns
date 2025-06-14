@@ -1,0 +1,139 @@
+
+class patterns {
+
+    //solid rectangle
+    public void pattern0() {
+        System.out.println("solid rectangle");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    //right angled triangle
+    public void pattern1() {
+        System.out.println("Right angled triangle");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    //inverted right angled triangle
+    public void pattern2() {
+        System.out.println("Inverted right angled triangle");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 3; j > i; j--) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    //right angled triangle(right aligned)
+    public void pattern3() {
+        System.out.println("Right angled triangle(right alinged)");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 3; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    //half pyramids with numbers
+    public void pattern4() {
+        System.out.println("Half Pyramids with Numbers");
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    //Floyd's triangle
+    public void pattern5() {
+        System.out.println("Floyd's Triangle");
+        int c = 1;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(c + " ");
+                c++;
+            }
+            System.out.println();
+        }
+    }
+
+    //full pyramid
+    public void pattern6() {
+        System.out.println("Full Pyramid");
+        for (int i = 0; i < 5; i++) {
+            for (int j = 5; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    //inverted full pyramid
+    public void pattern7() {
+        System.out.println("Inverted Full Pyramid");
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 5; j > i; j--) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    //diamond pattern
+    public void pattern8() {
+        System.out.println("Diamond Pattern");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 3; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for (int i = 1; i < 3; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 3; j > i; j--) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    // Main method to run all patterns
+    public static void main(String[] args) {
+        patterns in = new patterns();
+        in.pattern0();
+        in.pattern1();
+        in.pattern2();
+        in.pattern3();
+        in.pattern4();
+        in.pattern5();
+        in.pattern6();
+        in.pattern7();
+        in.pattern8();
+    }
+}
